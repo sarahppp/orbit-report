@@ -15,4 +15,13 @@ export class OrbitCountsComponent implements OnInit {
   ngOnInit() {
   }
 
+  findType (satellites: Satellite[], types: string){
+    let x: number = 0;
+    for(let satellite of satellites){
+      if(satellite.type.includes(types)){
+        x += 1; 
+      }
+    }
+    return x 
+ }
 }
